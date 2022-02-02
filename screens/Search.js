@@ -103,6 +103,31 @@ export default class SearchScreen extends Component {
     );
   };
 
+  handleSearch = async text => {
+    // add the code to convert the text to uppercase
+
+
+
+    /*if (enteredText[0] === "B") {
+      db.collection("transactions")
+        .where("book_id", "==", text)
+        .get()
+        .then(snapshot => {
+          snapshot.docs.map(doc => {
+            this.setState({
+              allTransactions: [...this.state.allTransactions, doc.data()],
+              lastVisibleTransaction: doc
+            });
+          });
+        });
+    } */
+   
+   // complete the else if part
+
+
+  };
+
+
   render() {
     const { searchText, allTransactions } = this.state;
     return (
@@ -156,7 +181,6 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     fontSize: 18,
     backgroundColor: "#5653D4",
-    fontFamily: "Rajdhani_600SemiBold",
     color: "#FFFFFF"
   },
   scanbutton: {
@@ -171,7 +195,6 @@ const styles = StyleSheet.create({
   scanbuttonText: {
     fontSize: 24,
     color: "#0A0101",
-    fontFamily: "Rajdhani_600SemiBold"
   },
   lowerContainer: {
     flex: 0.8,
@@ -179,11 +202,9 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontFamily: "Rajdhani_600SemiBold"
   },
   subtitle: {
     fontSize: 16,
-    fontFamily: "Rajdhani_600SemiBold"
   },
   lowerLeftContaiiner: {
     alignSelf: "flex-end",
@@ -197,11 +218,9 @@ const styles = StyleSheet.create({
   transactionText: {
     fontSize: 20,
 
-    fontFamily: "Rajdhani_600SemiBold"
   },
   date: {
     fontSize: 12,
-    fontFamily: "Rajdhani_600SemiBold",
     paddingTop: 5
   }
 });
